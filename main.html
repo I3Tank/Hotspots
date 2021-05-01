@@ -68,22 +68,24 @@
             if (slideIndex > slides.length) {slideIndex = 1}
             slides[slideIndex-1].style.display = "block";
             setTimeout(showSlides, 2000);
+            showSlides2();
         }
     </script>
     <script class="slide">
-        let slideIndex = 0;
-        showSlides2();
+        let slideIndex2 = 0;
+    //    showSlides2();
 
         function showSlides2() {
             let i;
-            const slides = document.querySelectorAll("img.p2");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
+            const slides2 = document.querySelectorAll("img.p2");
+            for (i = 0; i < slides2.length; i++) {
+                slides2[i].style.display = "none";
             }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}
-            slides[slideIndex-1].style.display = "block";
+            slideIndex2++;
+            if (slideIndex2 > slides2.length) {slideIndex2 = 1}
+            slides2[slideIndex2-1].style.display = "block";
             setTimeout(showSlides2, 2000);
+            showSlides();
         }
     </script>
 </main>
