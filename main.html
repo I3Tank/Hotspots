@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Hotstops</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
 <header><h1 class="title">Hotstops</h1></header>
@@ -29,14 +29,14 @@
         <br>
         <br>
         <section>
-            <img class="p1" src="pics/eiiiifel.jpg" height="249" width="100" alt="eii">
-            <img class="p1" src="pics/sthergrged.jpg" height="249" width="100" alt="st">
-            <img class="p1" src="pics/asdfasdfasdfasdf.jpg" height="249" width="100" alt="asd"/>
+            <img class="p1" src="pics/eiiiifel.jpg" height="449" width="300" alt="eii">
+            <img class="p1" src="pics/sthergrged.jpg" height="449" width="300" alt="st">
+            <img class="p1" src="pics/asdfasdfasdfasdf.jpg" height="449" width="300" alt="asd"/>
         </section>
-        <section>
-            <img class="p2" src="pics/bigben.jpg" height="249" width="100" alt="London">
-            <img class="p2" src="pics/Eifel.png" height="249" width="100" alt="asd"/>
-            <img class="p2" src="pics/st.PNG" height="249" width="100" alt="London">
+        <section id="p2">
+            <img class="p2" src="pics/bigben.jpg" height="449" width="300" alt="London">
+            <img class="p2" src="pics/Eifel.png" height="449" width="300" alt="asd"/>
+            <img class="p2" src="pics/st.PNG" height="449" width="300" alt="London">
         </section>
         </p>
     </article>
@@ -68,25 +68,22 @@
             if (slideIndex > slides.length) {slideIndex = 1}
             slides[slideIndex-1].style.display = "block";
             setTimeout(showSlides, 2000);
-
-            return showSlides2();
         }
     </script>
     <script class="slide">
-        let slideIndex2 = 0;
-      //  showSlides2();
+        let slideIndex = 0;
+        showSlides2();
 
         function showSlides2() {
             let i;
-            const slides2 = document.querySelectorAll("img.p2");
-            for (i = 0; i < slides2.length; i++) {
-                slides2[i].style.display = "none";
+            const slides = document.querySelectorAll("img.p2");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
             }
-            slideIndex2++;
-            if (slideIndex2 > slides2.length) {slideIndex2 = 1}
-            slides2[slideIndex2-1].style.display = "block";
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
             setTimeout(showSlides2, 2000);
-            return showSlides();
         }
     </script>
 </main>
