@@ -2,9 +2,90 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Github Test 123</title>
+    <title>Hotstops</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header><h1 class="title">Hotstops</h1></header>
+<main>
+    <article>
+        <h2 class="c1">City1</h2>
 
+    </article>
+    <article>
+        <h2 class="c2">City2</h2>
+
+    </article>
+    <article>
+        <h2 class="c3">City3</h2>
+
+    </article>
+    <article>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <section>
+            <img class="p1" src="pics/eiiiifel.jpg" height="449" width="300" alt="eii">
+            <img class="p1" src="pics/sthergrged.jpg" height="449" width="300" alt="st">
+            <img class="p1" src="pics/asdfasdfasdfasdf.jpg" height="449" width="300" alt="asd"/>
+        </section>
+        <section>
+            <img class="p2" src="pics/bigben.jpg" height="449" width="300" alt="London">
+            <img class="p2" src="pics/Eifel.png" height="449" width="300" alt="asd"/>
+            <img class="p2" src="pics/st.PNG" height="449" width="300" alt="London">
+        </section>
+        </p>
+    </article>
+    <script class="slide">
+        // let indexValue = 0;
+        //
+        // function slideShow(){
+        //     setTimeout(slideShow, 2500);
+        //     let x;
+        //     const img = document.querySelectorAll('img')
+        //     for(x = 0; x < img.length; x++){
+        //         img[x].style.display = "none";
+        //     }
+        //     indexValue++;
+        //     if(indexValue > img.length){indexValue = 1}
+        //     img[indexValue -1].style.display = "block";
+        // }
+        // slideShow();
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            const slides = document.querySelectorAll("img.p1");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 2000);
+        }
+    </script>
+    <script class="slide">
+        let slideIndex = 0;
+        showSlides2();
+
+        function showSlides2() {
+            let i;
+            const slides = document.querySelectorAll("img.p2");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides2, 2000);
+        }
+    </script>
+</main>
 </body>
 </html>
