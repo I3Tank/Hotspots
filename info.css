@@ -1,3 +1,85 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: darkslategrey;
+    height: 60px;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: black;
+
+}
+#hotstops {
+    float: left;
+    text-decoration: none;
+    font-weight: bold;
+    padding-left: 1%;
+    font-size: 30px;
+}
+li{
+    font-size: 25px;
+    padding: 15px 4% 15px 4%;
+    text-align: center;
+    display: inline;
+    list-style-type: none;
+    float: right;
+
+
+}
+li a{
+    text-decoration: none;
+    color: white;
+
+}
+.contentnav:hover{
+    background-color: aqua;
+}
+#navbar{
+    padding: 0;
+    margin: 0;
+}
+#banner{
+    padding: 90px;
+    margin: 0;
+    text-align: center;
+    background: cadetblue;
+    color: white;
+    font-size: 30px;
+    width: 100%;
+
+}
+main{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/*ul {*/
+/*    list-style-type: none;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    overflow: hidden;*/
+/*    background-color: #333;*/
+/*}*/
+
+/*li {*/
+/*    float: left;*/
+/*}*/
+
+/*li a {*/
+/*    display: block;*/
+/*    color: white;*/
+/*    text-align: center;*/
+/*    padding: 20px 50px;*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*!* Change the link color to #111 (black) on hover *!*/
+/*li a:hover {*/
+/*    background-color: #111;*/
+/*}*/
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
