@@ -28,15 +28,20 @@
         <br>
         <br>
         <br>
-        <section>
+        <section><br>
             <img class="p1" src="pics/eiiiifel.jpg" height="449" width="300" alt="eii">
             <img class="p1" src="pics/sthergrged.jpg" height="449" width="300" alt="st">
             <img class="p1" src="pics/asdfasdfasdfasdf.jpg" height="449" width="300" alt="asd"/>
-        </section>
+        </section><br>
         <section id="p2">
             <img class="p2" src="pics/bigben.jpg" height="449" width="300" alt="London">
             <img class="p2" src="pics/Eifel.png" height="449" width="300" alt="asd"/>
             <img class="p2" src="pics/st.PNG" height="449" width="300" alt="London">
+        </section><br>
+        <section id="p3">
+            <img class="p3" src="pics/bigben.jpg" height="449" width="300" alt="London">
+            <img class="p3" src="pics/Eifel.png" height="449" width="300" alt="asd"/>
+            <img class="p3" src="pics/st.PNG" height="449" width="300" alt="London">
         </section>
         </p>
     </article>
@@ -68,7 +73,8 @@
             if (slideIndex > slides.length) {slideIndex = 1}
             slides[slideIndex-1].style.display = "block";
             setTimeout(showSlides, 2000);
-            showSlides2();
+            return showSlides2();
+            return showSlides3();
         }
     </script>
     <script class="slide">
@@ -84,8 +90,22 @@
             slideIndex2++;
             if (slideIndex2 > slides2.length) {slideIndex2 = 1}
             slides2[slideIndex2-1].style.display = "block";
-            setTimeout(showSlides2, 2000);
-            showSlides();
+        }
+    </script>
+    <script>
+        let slideIndex3 = 0;
+        showSlides3();
+
+        function showSlides3() {
+            let i;
+            const slides = document.querySelectorAll("img.p3");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex3++;
+            if (slideIndex3 > slides.length) {slideIndex3 = 1}
+            slides[slideIndex3-1].style.display = "block";
+            setTimeout(showSlides3, 2000);
         }
     </script>
 </main>
