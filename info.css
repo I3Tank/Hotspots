@@ -40,16 +40,16 @@ li a{
     margin: 0;
 }
 #banner{
-    padding: 90px;
+    padding: 10%;
     margin: 0;
     text-align: center;
     background: cadetblue;
     color: white;
     font-size: 30px;
-    width: 100%;
+
 
 }
-main{
+body{
     margin: 0;
     padding: 0;
 }
@@ -80,31 +80,3 @@ main{
 /*li a:hover {*/
 /*    background-color: #111;*/
 /*}*/
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.topnav {
-    overflow: hidden;
-    background-color: #333;
-}
-
-.topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-.topnav a.active {
-    background-color: #04AA6D;
-    color: white;
-}
