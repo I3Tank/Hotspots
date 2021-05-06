@@ -9,7 +9,7 @@
 <header>
     <ul id="navbar">
         <li id="hotstops"><a href="main.html">Hotstops</a></li>
-        <li class="contentnav"><a href="main.html">Star</a></li>
+        <li class="contentnav"><a class="openbtn" onclick="openNav()">Star</a></li>
         <li class="contentnav"><a href="shop.html">Shop</a></li>
         <li class="contentnav"><a href="main.html">login</a></li>
     </ul>
@@ -22,6 +22,26 @@
         <h1>blablabla</h1>
     </section>
 </main>
+
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a>Hotspot 1</a>
+    <a>Hotspot 2</a>
+</div>
+
+
+<script>
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+    }
+</script>
+
 
 </body>
 </html>
