@@ -7,7 +7,7 @@
 </head>
 <body>
 <header>
-    <ul id="navbar">
+    <ul id="navbar" class="contentnav2">
         <li id="hotstops"><a href="main.html">Hotstops</a></li>
         <li class="contentnav"><a class="openbtn" onclick="openNav()">Star</a></li>
         <li class="contentnav"><a href="shop.html">Shop</a></li>
@@ -15,10 +15,17 @@
     </ul>
 </header>
 <main>
-    <section id="banner">
-        <h1 id="cityName">London</h1>
+    <section class="banner">
+        <h1 id="hi">London</h1>
 <!--        <img src="pics/NYC_Map.png" height="700" width="700"/>-->
-        <img id="cityMap" src="pics/London_Map.png" height="500" width="500"/>
+        <img src="pics/London_Map.png" height="550" width="550" id="london"/>
+        <ul id="hotspotlist">
+            <li>Hotspot 1</li>
+            <li>Hotspot 2</li>
+            <li>Hotspot 3</li>
+            <li>Hotspot 4</li>
+        </ul>
+
     </section>
 
     <article id="generalInformation">
@@ -74,8 +81,8 @@
 
 <script>
     function openNav() {
-        document.getElementById("mySidebar").style.width = "250px";
-        document.getElementById("main").style.marginLeft = "250px";
+        document.getElementById("mySidebar").style.width = "12%";
+        document.getElementById("main").style.marginLeft = "12%";
     }
 
     function closeNav() {
