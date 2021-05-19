@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <title>Hotstops</title>
     <link rel="stylesheet" href="info.css">
+    <script src="info.js"></script>
 </head>
 <body>
 <header>
     <ul id="navbar" class="contentnav2">
         <li id="hotstops"><a href="main.html">Hotstops</a></li>
-        <li class="contentnav"><a class="openbtn" onclick="openNav()">Star</a></li>
+        <li class="contentnav"><a class="openbtn" id="staropen" onclick="openNav()">Star</a></li>
         <li class="contentnav"><a href="shop.html">Shop</a></li>
         <li class="contentnav"><a href="main.html">login</a></li>
     </ul>
@@ -24,6 +25,7 @@
             <li>Hotspot 2</li>
             <li>Hotspot 3</li>
             <li>Hotspot 4</li>
+
         </ul>
 
     </section>
@@ -44,7 +46,6 @@
         <figure class="picture">
             <img id="galleryOfHotspot" src="pics/NYC_Map.png" height="400" width="400"/>
         </figure>
-
 
     </article>
     <article id="additionalInformation">
@@ -73,23 +74,23 @@
 </main>
 
 <div id="mySidebar" class="sidebar">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="javascript:void(0)" class="closebtn" id="starclose" onclick="closeNav()">×</a>
     <a>Hotspot 1</a>
     <a>Hotspot 2</a>
 </div>
 
 
-<script>
-    function openNav() {
-        document.getElementById("mySidebar").style.width = "12%";
-        document.getElementById("main").style.marginLeft = "12%";
-    }
+<!--<script>-->
+<!--    function openNav() {-->
+<!--        document.getElementById("mySidebar").style.width = "12%";-->
+<!--        document.getElementById("main").style.marginLeft = "12%";-->
+<!--    }-->
 
-    function closeNav() {
-        document.getElementById("mySidebar").style.width = "0";
-        document.getElementById("main").style.marginLeft= "0";
-    }
-</script>
+<!--    function closeNav() {-->
+<!--        document.getElementById("mySidebar").style.width = "0";-->
+<!--        document.getElementById("main").style.marginLeft= "0";-->
+<!--    }-->
+<!--</script>-->
 
 
 </body>

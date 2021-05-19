@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <title>Hotstops</title>
     <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
 </head>
 <body id="scroll">
+
 <header>
     <h1 class="title">Hotstops<img id="bild" src="pics/Logo.png" height="100" width="100"/></h1>
 </header>
@@ -31,55 +33,57 @@
 
     </article>
 
-    <script class="slide">
-        let slideIndex = 0;
-        showSlides();
+<!--     <script className="slide">-->
+<!--         let slideIndex = 0;-->
+<!--         showSlides();-->
+<!--    function showSlides() {-->
+<!--        let i;-->
+<!--        const slides = document.querySelectorAll("img.p1");-->
+<!--        for (i = 0; i < slides.length; i++) {-->
+<!--            slides[i].style.display = "none";-->
+<!--        }-->
+<!--        slideIndex++;-->
+<!--        if (slideIndex > slides.length) {slideIndex = 1}-->
+<!--        slides[slideIndex-1].style.display = "block";-->
+<!--        setTimeout(showSlides, 2000);-->
+<!--        return showSlides2();-->
+<!--        // return showSlides3();-->
+<!--    }-->
 
-        function showSlides() {
-            let i;
-            const slides = document.querySelectorAll("img.p1");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}
-            slides[slideIndex-1].style.display = "block";
-            setTimeout(showSlides, 2000);
-            return showSlides2();
-            // return showSlides3();
-        }
-    </script>
-    <script class="slide">
-        let slideIndex2 = 0;
-    //    showSlides2();
+<!--     </script>-->
+<!--     <script className="slide">-->
+<!--    let slideIndex2 = 0;-->
+<!--    showSlides2();-->
 
-        function showSlides2() {
-            let i;
-            const slides2 = document.querySelectorAll("img.p2");
-            for (i = 0; i < slides2.length; i++) {
-                slides2[i].style.display = "none";
-            }
-            slideIndex2++;
-            if (slideIndex2 > slides2.length) {slideIndex2 = 1}
-            slides2[slideIndex2-1].style.display = "block";
-        }
-    </script>
-    <script>
-        let slideIndex3 = 0;
-        showSlides3();
+<!--    function showSlides2() {-->
+<!--        let i;-->
+<!--        const slides2 = document.querySelectorAll("img.p2");-->
+<!--        for (i = 0; i < slides2.length; i++) {-->
+<!--            slides2[i].style.display = "none";-->
+<!--        }-->
+<!--        slideIndex2++;-->
+<!--        if (slideIndex2 > slides2.length) {slideIndex2 = 1}-->
+<!--        slides2[slideIndex2-1].style.display = "block";-->
+<!--    }-->
+<!--     </script>-->
+<!--     <script>-->
+<!--    let slideIndex3 = 0;-->
+<!--    showSlides3();-->
 
-        function showSlides3() {
-            let i;
-            const slides = document.querySelectorAll("img.p3");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex3++;
-            if (slideIndex3 > slides.length) {slideIndex3 = 1}
-            slides[slideIndex3-1].style.display = "block";
-            setTimeout(showSlides3, 2000);
-        }
-    </script>
+<!--    function showSlides3() {-->
+<!--        let i;-->
+<!--        const slides = document.querySelectorAll("img.p3");-->
+<!--        for (i = 0; i < slides.length; i++) {-->
+<!--            slides[i].style.display = "none";-->
+<!--        }-->
+<!--        slideIndex3++;-->
+<!--        if (slideIndex3 > slides.length) {slideIndex3 = 1}-->
+<!--        slides[slideIndex3-1].style.display = "block";-->
+<!--        setTimeout(showSlides3, 2000);-->
+<!--    }-->
+<!--     </script>-->
+
+<!--    <script>showSlides();showSlides2();showSlides3();</script>-->
 </main>
 </body>
 </html>
