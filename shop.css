@@ -1,0 +1,109 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: darkslategrey;
+    height: 60px;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: black;
+    z-index: 2;
+}
+#hotstops {
+    float: left;
+    text-decoration: none;
+    font-weight: bold;
+    padding-left: 1%;
+    font-size: 30px;
+}
+.contentnav2 li{
+    font-size: 25px;
+    padding: 15px 4% 15px 4%;
+    text-align: center;
+    display: inline;
+    list-style-type: none;
+    float: right;
+}
+.contentnav2 li a{
+    text-decoration: none;
+    color: white;
+
+}
+.contentnav:hover{
+    background-color: aqua;
+}
+#navbar{
+    padding: 0;
+    margin: 0;
+}
+
+.sidebarshop{
+    position: fixed;
+    top: 60px;
+    padding: 15px 0 0 15px;
+    margin-right: 10px;
+    float: left;
+    height: 100%;
+    width: 10%;
+    font-size: 25px;
+    background-color: cadetblue;
+    border-color: #111111;
+    border-right: solid;
+    border-width: 1px;
+}
+body{
+    margin: 0;
+    padding: 0;
+
+}
+/*.s1{*/
+/*    width: 85%;*/
+/*    !*float: left;*!*/
+/*    margin: 80px 0 0 15%;*/
+/*    !*display: flex;*!*/
+/*    !*justify-content: center;*!*/
+/*    !*text-align: center;*!*/
+
+/*}*/
+/*.s1{*/
+/*    margin-top: 80px;*/
+/*}*/
+
+/*.shoppictures{*/
+/*    margin: 0 15% 5% 0;*/
+/*    border: solid;*/
+/*    border-width: 2px;*/
+/*    border-color: #111111;*/
+/*    !*float: left;*!*/
+/*    !*justify-content: center;*!*/
+/*    !*text-align: center;*!*/
+
+
+/*}*/
+/*figcaption{*/
+/*    display: inline-block;*/
+/*    text-align: left;*/
+/*}*/
+/*figure{*/
+/*    text-align: center;*/
+/*}*/
+
+
+.img2{
+    width:200px;
+    text-align:center;
+    display:block;
+    background-color: transparent;
+    border: 1px solid transparent;
+    margin-right: 15%;
+    margin-bottom: 1px;
+    float:left;
+}
+
+#s1{
+    /*width:85%;*/
+    margin: 80px 0 0 15%;
+
+
+}
