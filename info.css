@@ -99,7 +99,7 @@ header{
     right: 70px;
 }
 /*-----------------------------------------------------------------------------------------------------------------------------------------*/
-.banner{
+#banner{
     position: relative;
     background: #3F7E80;
     color: white;
@@ -107,6 +107,7 @@ header{
     height: auto;
 }
 #cityName{
+    /*color: white;*/
     position: absolute;
     font-size: 60px;
     left: 7.5%;
