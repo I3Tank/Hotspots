@@ -1,3 +1,8 @@
+*{
+    /*box-sizing: content-box;*/
+    font-family: Impact, serif;
+    font-weight: normal;
+}
 header {
     position: fixed;
     top: 0;
@@ -10,12 +15,16 @@ header {
     border-color: black;
     z-index: 2;
 }
+#logo{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
 #hotstops {
     float: left;
-    text-decoration: none;
-    font-weight: bold;
-    padding-left: 1%;
     font-size: 30px;
+    text-decoration: none;
+    padding-left: 60px;
 }
 .contentnav2 li{
     font-size: 25px;
@@ -55,7 +64,6 @@ header {
 body{
     margin: 0;
     padding: 0;
-
 }
 /*.s1{*/
 /*    width: 85%;*/
