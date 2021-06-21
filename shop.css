@@ -47,7 +47,7 @@ header {
     margin: 0;
 }
 
-.sidebarshop{
+.sidebarShop{
     position: fixed;
     top: 60px;
     padding: 15px 0 0 15px;
@@ -78,7 +78,7 @@ body{
 /*    margin-top: 80px;*/
 /*}*/
 
-/*.shoppictures{*/
+/*.shopPictures{*/
 /*    margin: 0 15% 5% 0;*/
 /*    border: solid;*/
 /*    border-width: 2px;*/

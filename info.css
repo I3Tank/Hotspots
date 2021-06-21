@@ -75,14 +75,14 @@ header{
 .openBtn{
     cursor: pointer;
 }
-.sidebar .closeBtn {
+.sidebar #closeBtn {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
 }
-.sidebar .closeBtn {
+.sidebar #closeBtn {
     position: absolute;
     top: 0;
     right: 25px;
@@ -132,12 +132,12 @@ header{
     margin: 0;
 }
 #hotspotList{
-    font-size: 40px;
-    text-align: center;
+    font-size: 30px;
+    text-align: left;
     position: absolute;
     top: 20%;
-    right: 12.5%;
-    width: 250px;
+    right: 5.5%;
+    width: 350px;
 }
 #hotspotList li{
     margin-top: 15px;

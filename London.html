@@ -11,7 +11,7 @@
     <img id="logo" src="pics/Logo.png" height="50" width="50"/>
     <ul id="navbar" class="contentNav2">
         <li id="hotstops"><a href="main.html">Hotstops</a></li>
-        <li id="favourites"><a class="openBtn" onclick="openNav()"><img id="star" src="pics/symbols/Star.png" height="40" width="40" alt="Favourites"/></a></li>
+        <li id="favourites"><a class="openBtn"><img id="star" src="pics/symbols/Star.png" height="40" width="40" alt="Favourites"/></a></li>
         <li class="contentNav"><a href="shop.html">Shop</a></li>
         <li class="contentNav"><a href="main.html">Login</a></li>
     </ul>
@@ -20,14 +20,14 @@
     <section id="banner">
         <h1 id="cityName">London</h1>
         <h1 id="weather">25° Sunshine</h1>
-        <img src="pics/London_Map.png" height="2048" width="2048" id="mainMap" alt="Picture of ..."/>
+        <img src="pics/London/London_Map.png" height="2048" width="2048" id="mainMap" alt="Picture of London"/>
         <article id="hotspotList">
             <h1 id="hotspotListHeader">Hotstops</h1>
             <ul>
-                <li>Hotspot 1<img src="pics/symbols/StarEmpty.png" height="64" width="64" alt="Favourite"/></li>
-                <li>Hotspot 2<img src="pics/symbols/StarEmpty.png" height="64" width="64" alt="Favourite"/></li>
-                <li>Hotspot 3<img src="pics/symbols/StarEmpty.png" height="64" width="64" alt="Favourite"/></li>
-                <li>Hotspot 4<img src="pics/symbols/StarEmpty.png" height="64" width="64" alt="Favourite"/></li>
+                <li id="BigBen">Big Ben<img src="pics/symbols/StarEmpty.png" height="64" width="64" alt="Favourite"/></li>
+                <li id="BuckinghamPalace">Buckingham Palace<img src="pics/symbols/StarEmpty.png" height="64" width="64" alt="Favourite"/></li>
+                <li id="LondonEye">London Eye<img src="pics/symbols/StarEmpty.png" height="64" width="64" alt="Favourite"/></li>
+<!--                <li>Hotspot 4<img src="pics/symbols/StarEmpty.png" height="64" width="64" alt="Favourite"/></li>-->
             </ul>
         </article>
     </section>
@@ -35,7 +35,7 @@
     <article id="generalInformation">
         <div class="text" id="generalInformationText">
             <h1 id="generalInformationH1">General Information:</h1>
-            <p>
+            <p id="generalInformationP">
                 London is a city. It has trees and air and much more. Come visit! :)<br>
                 Do you perhaps like tea? We gotcha!<br>
                 This is another line of information.<br>
@@ -44,32 +44,32 @@
                 This is the longest and also the last line of general information that i can come up with right now for testing purposes.
             </p>
         </div>
-        <img class="picture" id="galleryOfHotspot" src="pics/NYC_Map.png" height="2048" width="2048" alt="Gallery of Hotstops"/>
+        <img class="picture" id="galleryOfHotspot" src="pics/NewYork/NYC_Map.png" height="2048" width="2048" alt="Gallery of Hotstops"/>
     </article>
 
     <article id="additionalInformation">
         <div class="text" id="additionalInformationText">
-            <h1>Additional Information</h1>
-            <h2>Opening Hours</h2>
-            <p>
+            <h1 id="additionalInformationH1">Additional Information:</h1>
+            <h2 id="additionalInformationH2_1">Opening Hours</h2>
+            <p id="additionalInformationP1">
                 Mon-Wed: 9:00 - 12:00<br>
                 Thu-Fri: 9:00 - 15:00<br>
                 Sat: 9:00 - 12:00<br>
                 Sun: -closed-
             </p>
-            <h2>History</h2>
-            <p>
+            <h2 id="additionalInformationH2_2">History</h2>
+            <p id="additionalInformationP2">
                 This is more information for testing. Please Ignore this message.<br>
                 Please stop reading after this line.<br>
                 Bruh.
             </p>
         </div>
-        <img class="picture" id="googleMapsView" src="pics/NYC_Map.png" height="2048" width="2048" alt="Google Maps View"/>
+        <img class="picture" id="googleMapsView" src="pics/NewYork/NYC_Map.png" height="2048" width="2048" alt="Google Maps View"/>
     </article>
 </main>
 
 <div id="mySidebar" class="sidebar">
-    <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()">×</a>
+    <a href="javascript:void(0)" id="closeBtn">×</a>
     <a>Hotspot 1</a>
     <a>Hotspot 2</a>
 </div>

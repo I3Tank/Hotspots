@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 
-
     var slideIndex = 0;
     function carousel2() {
         let i;
@@ -41,5 +40,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
         setTimeout(showSlides, 2000); // Change image every 2 seconds
     }
     showSlides();
-
 });
