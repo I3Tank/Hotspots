@@ -142,6 +142,7 @@ header{
 #hotspotList li{
     margin-top: 15px;
     margin-bottom: 15px;
+    cursor: pointer;
 }
 #hotspotList img{
     width: 32px;

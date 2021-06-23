@@ -108,6 +108,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
         initializeBanner(){
             //Hotstops List
+            console.log("hi");
             this.hotstopsList = document.getElementById("hotspotList");
             this.hotstopUL = document.createElement("ul");
             this.hotstopsList.appendChild(this.hotstopUL);
@@ -171,11 +172,35 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     this.mainInfoScreen.appendChild(this.displayBanner);
                     break;
             }
+
+            this.allStars = document.getElementsByClassName("star");
+            for (let i = 0; i < this.allStars.length; i++) {
+                this.allStars.item(i).addEventListener("click", event => this.changeStar(this.allStars.item(i)));
+            }
+
             //append the starting information from html5
             this.generalInformationArticle = document.getElementById("generalInformation");
             this.mainInfoScreen.appendChild(this.generalInformationArticle);
             this.additionalInformationArticle = document.getElementById("additionalInformation");
             this.mainInfoScreen.appendChild(this.additionalInformationArticle);
+
+
+        }
+
+        changeStar(star) {
+            console.log("help me");
+            if (star.src.match("StarEmpty")) {
+                star.src = "pics/symbols/Star.png"
+            }
+            else if (star.src.match("Star")) {
+                star.src = "pics/symbols/StarEmpty.png"
+            }
+
+            // this.hotstopsList.removeChild(emptystar);
+            // this.fullstar = document.createElement("img");
+            // this.fullstar.src = "pics/symbols/Star.png";
+            // this.hotstopsList.appendChild(this.fullstar);
+
         }
     }
     const info = new Info();
