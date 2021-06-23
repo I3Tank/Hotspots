@@ -25,6 +25,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     info.changeInformation(data);
                 });
         }
+        // openLoginWindow(){
+        //     fetch('http://localhost:3000/api/hotstops/login');
+        // }
         changeInformation(hotspot) {
             this.hotstop = hotspot;
 
@@ -97,8 +100,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
             document.getElementById("main").style.marginLeft = "12.5%";
         }
         initializeHeader(){
-            //Login
             //TODO functionality for Login Button
+            //Login button
+            // this.loginButton = document.getElementById("loginButton");
+            // this.loginButton.addEventListener("click", this.openLoginWindow);
 
             //Favourite List Function
             this.favouriteList = document.getElementById("favourites");
@@ -107,6 +112,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             this.favouriteListCloseBtn.addEventListener("click", this.closeNav);
         }
         initializeBanner(){
+            console.log("banner init");
             //Hotstops List
             this.hotstopsList = document.getElementById("hotspotList");
             this.hotstopUL = document.createElement("ul");
@@ -171,11 +177,25 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     this.mainInfoScreen.appendChild(this.displayBanner);
                     break;
             }
+            //star functionality
+            this.allStars = document.getElementsByClassName("star");
+            for (let i = 0; i < this.allStars.length; i++) {
+                this.allStars.item(i).addEventListener("click", event => this.changeStar(this.allStars.item(i)));
+            }
+
             //append the starting information from html5
             this.generalInformationArticle = document.getElementById("generalInformation");
             this.mainInfoScreen.appendChild(this.generalInformationArticle);
             this.additionalInformationArticle = document.getElementById("additionalInformation");
             this.mainInfoScreen.appendChild(this.additionalInformationArticle);
+        }
+        changeStar(star) {
+            let currentImg = star.src;
+            if (currentImg.match("StarEmpty")) {
+                star.src = "pics/symbols/Star.png"
+            } else{
+                star.src = "pics/symbols/StarEmpty.png"
+            }
         }
     }
     const info = new Info();

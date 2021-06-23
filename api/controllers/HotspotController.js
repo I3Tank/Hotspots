@@ -18,7 +18,6 @@ class HotspotController{
             res.status(404).send('Hotspot not found.');
         }
     }
-
     static hotspot_update(req, res){
         const {id} = req.params;
         const hotspot = req.body;
