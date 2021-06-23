@@ -25,6 +25,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     info.changeInformation(data);
                 });
         }
+        // openLoginWindow(){
+        //     fetch('http://localhost:3000/api/hotstops/login');
+        // }
         changeInformation(hotspot) {
             this.hotstop = hotspot;
 
@@ -97,8 +100,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
             document.getElementById("main").style.marginLeft = "12.5%";
         }
         initializeHeader(){
-            //Login
             //TODO functionality for Login Button
+            //Login button
+            // this.loginButton = document.getElementById("loginButton");
+            // this.loginButton.addEventListener("click", this.openLoginWindow);
 
             //Favourite List Function
             this.favouriteList = document.getElementById("favourites");
@@ -172,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     this.mainInfoScreen.appendChild(this.displayBanner);
                     break;
             }
-
+            //star functionality
             this.allStars = document.getElementsByClassName("star");
             for (let i = 0; i < this.allStars.length; i++) {
                 this.allStars.item(i).addEventListener("click", event => this.changeStar(this.allStars.item(i)));
