@@ -114,10 +114,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             switch (document.getElementById("cityName").textContent){
                 case "New York":
-                    //TODO Buttons for New York
-                    this.hotstopButton0 = document.getElementById("EmpireStateBuilding");
-                    this.hotstopButton0.addEventListener("click", event => this.fetchHotspot(0));
-                    this.hotstopsList.appendChild(this.hotstopButton0);
+                    //Hotstop 1
+                    this.hotstopButton = document.getElementById("EmpireStateBuilding");
+                    this.hotstopButton.addEventListener("click", event => this.fetchHotspot(0));
+                    this.hotstopsList.appendChild(this.hotstopButton);
 
                     //Hotstop 2
                     this.hotstopButton1 = document.getElementById("StatueOfLiberty");
@@ -133,26 +133,42 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     this.mainInfoScreen.appendChild(this.displayBanner);
                     break;
                 case "London":
-                    //Hotstop 1
-                    this.hotstopButton1 = document.getElementById("BigBen");
-                    this.hotstopButton1.addEventListener("click", event => this.fetchHotspot(3));
-                    this.hotstopsList.appendChild(this.hotstopButton1);
-
-                    //Hotstop 2
-                    this.hotstopButton2 = document.getElementById("BuckinghamPalace");
-                    this.hotstopButton2.addEventListener("click", event => this.fetchHotspot(4));
-                    this.hotstopsList.appendChild(this.hotstopButton2);
-
                     //Hotstop 3
-                    this.hotstopButton3 = document.getElementById("LondonEye");
-                    this.hotstopButton3.addEventListener("click", event => this.fetchHotspot(5));
+                    this.hotstopButton3 = document.getElementById("BigBen");
+                    this.hotstopButton3.addEventListener("click", event => this.fetchHotspot(3));
                     this.hotstopsList.appendChild(this.hotstopButton3);
+
+                    //Hotstop 4
+                    this.hotstopButton4 = document.getElementById("BuckinghamPalace");
+                    this.hotstopButton4.addEventListener("click", event => this.fetchHotspot(4));
+                    this.hotstopsList.appendChild(this.hotstopButton4);
+
+                    //Hotstop 5
+                    this.hotstopButton5 = document.getElementById("LondonEye");
+                    this.hotstopButton5.addEventListener("click", event => this.fetchHotspot(5));
+                    this.hotstopsList.appendChild(this.hotstopButton5);
 
                     this.displayBanner.appendChild(this.hotstopUL);
                     this.mainInfoScreen.appendChild(this.displayBanner);
                     break;
                 case "Istanbul":
-                    //TODO Buttons for Istanbul
+                    //Hotstop 6
+                    this.hotstopButton6 = document.getElementById("Ayasofya");
+                    this.hotstopButton6.addEventListener("click", event => this.fetchHotspot(6));
+                    this.hotstopsList.appendChild(this.hotstopButton6);
+
+                    //Hotstop 7
+                    this.hotstopButton7 = document.getElementById("MaidensTower");
+                    this.hotstopButton7.addEventListener("click", event => this.fetchHotspot(7));
+                    this.hotstopsList.appendChild(this.hotstopButton7);
+
+                    //Hotstop 8
+                    this.hotstopButton8 = document.getElementById("Taksim");
+                    this.hotstopButton8.addEventListener("click", event => this.fetchHotspot(8));
+                    this.hotstopsList.appendChild(this.hotstopButton8);
+
+                    this.displayBanner.appendChild(this.hotstopUL);
+                    this.mainInfoScreen.appendChild(this.displayBanner);
                     break;
             }
             //append the starting information from html5

@@ -24,10 +24,9 @@
         <article id="hotspotList">
             <h1 id="hotspotListHeader">Hotstops</h1>
             <ul>
-                <li>Ayasofya<img src="pics/symbols/StarEmpty.png" height="64" width="64" alt="Favourite"/></li>
-                <li>Maidens Tower<img src="pics/symbols/StarEmpty.png" height="64" width="64" alt="Favourite"/></li>
-                <li>Taksim<img src="pics/symbols/StarEmpty.png" height="64" width="64" alt="Favourite"/></li>
-                <li>Hotspot 4<img src="pics/symbols/StarEmpty.png" height="64" width="64" alt="Favourite"/></li>
+                <li id="Ayasofya">Ayasofya<img src="pics/symbols/StarEmpty.png" height="64" width="64" alt="Favourite"/></li>
+                <li id="MaidensTower">Maidens Tower<img src="pics/symbols/StarEmpty.png" height="64" width="64" alt="Favourite"/></li>
+                <li id="Taksim">Taksim<img src="pics/symbols/StarEmpty.png" height="64" width="64" alt="Favourite"/></li>
             </ul>
         </article>
     </section>
@@ -35,8 +34,8 @@
     <article id="generalInformation">
         <div class="text" id="generalInformationText">
             <h1 id="generalInformationH1">General Information:</h1>
-            <p>
-                Istanbul is a city. It has trees and air and much more. Come visit! :)<br>
+            <p id="generalInformationP">
+                London is a city. It has trees and air and much more. Come visit! :)<br>
                 Do you perhaps like tea? We gotcha!<br>
                 This is another line of information.<br>
                 This one is too.<br>
@@ -49,16 +48,16 @@
 
     <article id="additionalInformation">
         <div class="text" id="additionalInformationText">
-            <h1>Additional Information</h1>
-            <h2>Opening Hours</h2>
-            <p>
+            <h1 id="additionalInformationH1">Additional Information:</h1>
+            <h2 id="additionalInformationH2_1">Opening Hours</h2>
+            <p id="additionalInformationP1">
                 Mon-Wed: 9:00 - 12:00<br>
                 Thu-Fri: 9:00 - 15:00<br>
                 Sat: 9:00 - 12:00<br>
                 Sun: -closed-
             </p>
-            <h2>History</h2>
-            <p>
+            <h2 id="additionalInformationH2_2">History</h2>
+            <p id="additionalInformationP2">
                 This is more information for testing. Please Ignore this message.<br>
                 Please stop reading after this line.<br>
                 Bruh.
@@ -69,7 +68,7 @@
 </main>
 
 <div id="mySidebar" class="sidebar">
-    <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()">×</a>
+    <a href="javascript:void(0)" id="closeBtn">×</a>
     <a>Hotspot 1</a>
     <a>Hotspot 2</a>
 </div>

@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 
+    function printTest(){
+        console.log("test");
+    }
+
     var slideIndex = 0;
     function carousel2() {
         let i;
