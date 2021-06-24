@@ -2,7 +2,8 @@ const LoginModel = require("../models/LoginModel");
 
 class LoginController{
     static login(req, res){
-        alert("logging in...");
+        //alert("logging in...");
+        console.log("logging in...");
         let username = req.body.username;
         let password = req.body.password;
         if(username && password){

@@ -6,12 +6,18 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT || 3000;
 
+const frontendRoutes = require('./api/routes/FrontendRoutes');
+app.use('/hotspots', frontendRoutes);
+app.use(express.static(__dirname + '/public'));
+
 
 const hotspotRoutes = require('./api/routes/HotspotRoutes');
-app.use('/api/hotstops', hotspotRoutes);
+app.use('/api/Hotstops', hotspotRoutes);
+
 
 const loginRoutes = require('./api/routes/LoginRoutes');
 app.use('/hotspots', loginRoutes);
+
 
 app.use(session({
     secret: 'H0t$T0p$$3cR3t',

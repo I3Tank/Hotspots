@@ -4,9 +4,8 @@ const hotspots = new Map();
 hotspots.set("0", {
     weather: "Rainy",
     location: "pics\/NewYork\/NYC_Map_EmpireStateBuilding.png",
-    generalInformation: "This is the first General Information from a web server.\r\n I hope this works.",
-    additionalInformation1: "Monday to Thursday 1 - 10pm" +
-        "\nFriday to Sunday 12pm - 12am",
+    generalInformation: "This is the first General Information from a web server.I hope this works.",
+    additionalInformation1: "Monday to Thursday 1 - 10pm Friday to Sunday 12pm - 12am",
     additionalInformation2: "Gibts keine",
 });
 hotspots.set("1", {
