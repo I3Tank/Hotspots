@@ -2,22 +2,8 @@ const express = require('express');
 const session = require('express-session');
 const bodyParser = require('body-parser');
 
-
 const app = express();
 const port = process.env.PORT || 3000;
-
-const frontendRoutes = require('./api/routes/FrontendRoutes');
-app.use('/hotspots', frontendRoutes);
-app.use(express.static(__dirname + '/public'));
-
-
-const hotspotRoutes = require('./api/routes/HotspotRoutes');
-app.use('/api/Hotstops', hotspotRoutes);
-
-
-const loginRoutes = require('./api/routes/LoginRoutes');
-app.use('/hotspots', loginRoutes);
-
 
 app.use(session({
     secret: 'H0t$T0p$$3cR3t',
@@ -25,8 +11,23 @@ app.use(session({
     saveUninitialized: true
 }));
 
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+
+const frontendRoutes = require('./api/routes/FrontendRoutes');
+app.use('/', frontendRoutes);
+
+app.use(express.static(__dirname + '/public'));
+
+const hotspotRoutes = require('./api/routes/HotspotRoutes');
+app.use('/api/Hotstops', hotspotRoutes);
+
+
+const loginRoutes = require('./api/routes/LoginRoutes');
+app.use('/login', loginRoutes);
+
+
+
 
 // Start Server listening on Port ${port}
 app.listen(port, (error) => {

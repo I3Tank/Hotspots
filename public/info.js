@@ -25,9 +25,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     info.changeInformation(data);
                 });
         }
-        // openLoginWindow(){
-        //     fetch('http://localhost:3000/api/hotstops/login');
-        // }
+        fetchShop(){
+            console.log("shop");
+            // fetch('http://localhost:3000/shop').then(function(response){
+            //     console.log(response);
+            //     window.location.href(response.url);
+            // });
+
+            fetch('http://localhost:3000/shop',{method: 'GET'})
+                .then(response => {
+                response.redirect('/shop.html');
+                });
+        }
         changeInformation(hotspot) {
             this.hotstop = hotspot;
 
@@ -105,6 +114,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
             // this.loginButton = document.getElementById("loginButton");
             // this.loginButton.addEventListener("click", this.openLoginWindow);
 
+            //shop functionality
+            this.shopButton = document.getElementById("shopBtn");
+            this.shopButton.addEventListener("click", event => this.fetchShop());
+
             //Favourite List Function
             this.favouriteList = document.getElementById("favourites");
             this.favouriteList.addEventListener("click", this.openNav);
@@ -176,6 +189,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     this.mainInfoScreen.appendChild(this.displayBanner);
                     break;
             }
+
+
+
             //star functionality
             this.allStars = document.getElementsByClassName("star");
             for (let i = 0; i < this.allStars.length; i++) {
@@ -187,6 +203,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             this.additionalInformationArticle = document.getElementById("additionalInformation");
             this.mainInfoScreen.appendChild(this.additionalInformationArticle);
         }
+
 
         changeStar(star) {
             if (star.src.match("StarEmpty")) {
