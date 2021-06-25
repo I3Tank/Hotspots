@@ -11,9 +11,19 @@
     <img id="logo" src="Logo.png" height="50" width="50"/>
     <ul id="navbar" class="contentNav2">
         <li id="hotstops"><a href="main.html">Hotstops</a></li>
-        <li id="favourites"><a class="openBtn" onclick="openNav()"><img id="star" src="symbols/Star.png" height="40" width="40" alt="Favourites"/></a></li>
-        <li class="contentNav"><a id="shopBtn">Shop</a></li>
-        <li class="contentNav"><a href="main.html">Login</a></li>
+        <li id="favourites"><a class="openBtn"><img id="star" src="symbols/Star.png" height="40" width="40" alt="Favourites"/></a></li>
+        <li class="contentNav">
+            <!--<a id="shopBtn" href="shop" type="submit">Shop</a>-->
+            <form action="shop" method="GET">
+                <input id="shopBtn" value="Shop" type="submit">
+            </form>
+        </li>
+        <li class="contentNav">
+            <!--<a href="login.html">Login</a>-->
+            <form action="login" method="GET">
+                <input id="loginButton" value="Login" type="submit">
+            </form>
+        </li>
     </ul>
 </header>
 <main id="mainInfoScreen">

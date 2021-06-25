@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", function (event) {
-    class Hotstops {
-        constructor(weather, location, generalInformation, additionalInformation1, additionalInformation2) {
-            this.weather = weather;
-            this.location = location;
-            this.generalInformation = generalInformation;
-            this.additionalInformation1 = additionalInformation1;
-            this.additionalInformation2 = additionalInformation2;
-        }
-    }
+    // class Hotstops {
+    //     constructor(weather, location, generalInformation, additionalInformation1, additionalInformation2) {
+    //         this.weather = weather;
+    //         this.location = location;
+    //         this.generalInformation = generalInformation;
+    //         this.additionalInformation1 = additionalInformation1;
+    //         this.additionalInformation2 = additionalInformation2;
+    //     }
+    // }
 
     class Info {
         constructor() {

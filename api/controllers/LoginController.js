@@ -4,7 +4,10 @@ class LoginController{
     static login(req, res){
         console.log("logging in...");
         let username = req.body.username;
+        // let password = req.body.password;
         let password = req.body.password;
+        console.log(username);
+        console.log(password);
 
         if(username && password){
             console.log(username + password);

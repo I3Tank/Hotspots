@@ -4,18 +4,30 @@
     <meta charset="UTF-8">
     <title>Shop</title>
     <link rel="stylesheet" href="shop.css">
+    <script src="shop.js"></script>
+
 </head>
 <body>
 <header>
     <img id="logo" src="Logo.png" height="50" width="50"/>
-    <ul id="navbar" class="contentnav2">
+    <ul id="navbar" class="contentNav2">
         <li id="hotstops"><a href="main.html">Hotstops</a></li>
-        <li class="contentnav"><a class="openbtn" onclick="openNav()">Star</a></li>
-        <li class="contentnav"><a href="shop.html">Shop</a></li>
-        <li class="contentnav"><a href="main.html">Login</a></li>
+        <li id="favourites"><a class="openBtn"><img id="star" src="symbols/Star.png" height="40" width="40" alt="Favourites"/></a></li>
+        <li class="contentNav">
+            <!--            <a id="shopBtn" href="shop" type="submit">Shop</a>-->
+            <form action="shop" method="GET">
+                <input id="shopBtn" value="Shop" type="submit">
+            </form>
+        </li>
+        <li class="contentNav">
+            <!--            <a href="login.html">Login</a>-->
+            <form action="login" method="GET">
+                <input id="loginButton" value="Login" type="submit">
+            </form>
+        </li>
     </ul>
 </header>
-<main>
+<main id="mainInfoScreen">
 
     <aside>
         <div class="sidebarShop">
@@ -52,6 +64,12 @@
         <p>Product</p>
         </div>
     </div>
+
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" id="closeBtn">×</a>
+    <a>Hotspot 1</a>
+    <a>Hotspot 2</a>
+</div>
 
 </main>
 </body>

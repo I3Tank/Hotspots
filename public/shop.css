@@ -1,5 +1,5 @@
 *{
-    /*box-sizing: content-box;*/
+    box-sizing: content-box;
     font-family: Impact, serif;
     font-weight: normal;
 }
@@ -7,12 +7,12 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    background-color: darkslategrey;
+
     height: 60px;
-    border-bottom: solid;
-    border-width: 1px;
-    border-color: black;
+    width: 100%;
+
+    background-color: darkslategray;
+
     z-index: 2;
 }
 #logo{
@@ -26,27 +26,77 @@ header {
     text-decoration: none;
     padding-left: 60px;
 }
-.contentnav2 li{
-    font-size: 25px;
-    padding: 15px 4% 15px 4%;
-    text-align: center;
-    display: inline;
-    list-style-type: none;
-    float: right;
-}
-.contentnav2 li a{
-    text-decoration: none;
+#shopBtn , #loginButton{
+    all: unset;  /*removes all stylings*/
     color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+.contentNav2 li{
+    float: right;
+    display: inline;
+
+    font-size: 25px;
+    text-align: center;
+    padding: 15px 4% 15px 4%;
+
+    list-style-type: none;
 
 }
-.contentnav:hover{
-    background-color: aqua;
+.contentNav2 li a {
+    color: white;
+    text-decoration: none;
+}
+.contentNav:hover{
+    background-color: darkcyan;
 }
 #navbar{
     padding: 0;
     margin: 0;
 }
-
+.sidebar{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+.openBtn{
+    cursor: pointer;
+}
+.sidebar #closeBtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+#favourites{
+    width: 120px;
+    padding: 30px 30px 30px 30px;
+}
+#star{
+    position: absolute;
+    top: 10px;
+    right: 70px;
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------*/
 .sidebarShop{
     position: fixed;
     top: 60px;
