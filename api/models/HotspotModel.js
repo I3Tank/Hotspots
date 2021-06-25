@@ -78,8 +78,8 @@ class HotspotModel{
         hotspots.set(id, hotspot);
     }
     static updateHotspot(id, hotspot){
-        hotspots.delete(id);
-        hotspots.set(id, hotspot);
+        hotspots.set(id.toString(), hotspot);
+        return hotspot;
     }
     static deleteHotspot(id){
         hotspots.delete(id);

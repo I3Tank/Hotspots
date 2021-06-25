@@ -14,20 +14,16 @@ app.use(session({
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
+app.use(express.static(__dirname + '/public'));
+
 const frontendRoutes = require('./api/routes/FrontendRoutes');
 app.use('/', frontendRoutes);
-
-app.use(express.static(__dirname + '/public'));
 
 const hotspotRoutes = require('./api/routes/HotspotRoutes');
 app.use('/api/Hotstops', hotspotRoutes);
 
-
 const loginRoutes = require('./api/routes/LoginRoutes');
-app.use('/login', loginRoutes);
-
-
-
+app.use('/', loginRoutes);
 
 // Start Server listening on Port ${port}
 app.listen(port, (error) => {

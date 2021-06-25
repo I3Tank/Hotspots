@@ -22,7 +22,10 @@ class HotspotController{
         const {id} = req.params;
         const hotspot = req.body;
 
+        console.log(hotspot);
+        console.log(id);
         const putHotspot = HotspotModel.updateHotspot(id, hotspot);
+        console.log(putHotspot);
         if (putHotspot) {
             res.send(putHotspot);
         } else {

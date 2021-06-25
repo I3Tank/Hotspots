@@ -26,5 +26,36 @@ class LoginController{
         }
         res.end();
     }
+    static register(req, res){
+        let username = req.body.username;
+        let password = req.body.password;
+
+        if(LoginModel.registerUser(username, password)){
+            res.redirect('/main.html');
+        }
+        else{
+            res.send("User already exists!");
+        }
+    }
+    static checkLogin(req, res, next) {
+        if (req.session.loggedin) {
+            console.log("display Shop");
+            next();
+
+        } else {
+            console.log("deny Shop");
+            res.redirect("/login.html");
+            next();
+        }
+    }
+    static logout(req, res){
+        if(req.session.loggedin){
+            req.session.destroy();
+            res.redirect('main.html');
+        }else{
+            res.send('Login first!')
+        }
+        res.end();
+    }
 }
 module.exports = LoginController;

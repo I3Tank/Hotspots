@@ -25,18 +25,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     info.changeInformation(data);
                 });
         }
-        fetchShop(){
-            console.log("shop");
-            // fetch('http://localhost:3000/shop').then(function(response){
-            //     console.log(response);
-            //     window.location.href(response.url);
-            // });
-
-            fetch('http://localhost:3000/shop',{method: 'GET'})
-                .then(response => {
-                response.redirect('/shop.html');
-                });
-        }
+        // fetchShop(){
+        //     console.log("shop");
+        //     // fetch('http://localhost:3000/shop').then(function(response){
+        //     //     console.log(response);
+        //     //     window.location.href(response.url);
+        //     // });
+        //
+        //     fetch('http://localhost:3000/shop',{method: 'GET'})
+        //         .then(response => {
+        //         response.redirect('/shop.html');
+        //         });
+        // }
         changeInformation(hotspot) {
             this.hotstop = hotspot;
 
@@ -115,8 +115,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
             // this.loginButton.addEventListener("click", this.openLoginWindow);
 
             //shop functionality
-            this.shopButton = document.getElementById("shopBtn");
-            this.shopButton.addEventListener("click", event => this.fetchShop());
+            // this.shopButton = document.getElementById("shopBtn");
+            // this.shopButton.addEventListener("click", event => this.fetchShop());
 
             //Favourite List Function
             this.favouriteList = document.getElementById("favourites");
@@ -207,10 +207,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         changeStar(star) {
             if (star.src.match("StarEmpty")) {
-                star.src = "pics/symbols/Star.png"
+                star.src = "./symbols/Star.png";
             }
             else if (star.src.match("Star")) {
-                star.src = "pics/symbols/StarEmpty.png"
+                star.src = "./symbols/StarEmpty.png";
             }
         }
     }
