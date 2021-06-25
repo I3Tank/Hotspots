@@ -1,13 +1,14 @@
 document.addEventListener("DOMContentLoaded", function (event) {
-    // class Hotstops {
-    //     constructor(weather, location, generalInformation, additionalInformation1, additionalInformation2) {
-    //         this.weather = weather;
-    //         this.location = location;
-    //         this.generalInformation = generalInformation;
-    //         this.additionalInformation1 = additionalInformation1;
-    //         this.additionalInformation2 = additionalInformation2;
-    //     }
-    // }
+    class Hotstops {
+        constructor(weather, location, generalInformation, additionalInformation1, additionalInformation2, currency) {
+            this.weather = weather;
+            this.location = location;
+            this.generalInformation = generalInformation;
+            this.additionalInformation1 = additionalInformation1;
+            this.additionalInformation2 = additionalInformation2;
+            this.currency = currency;
+        }
+    }
 
     class Info {
         constructor() {
@@ -25,25 +26,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     info.changeInformation(data);
                 });
         }
-        // fetchShop(){
-        //     console.log("shop");
-        //     // fetch('http://localhost:3000/shop').then(function(response){
-        //     //     console.log(response);
-        //     //     window.location.href(response.url);
-        //     // });
-        //
-        //     fetch('http://localhost:3000/shop',{method: 'GET'})
-        //         .then(response => {
-        //         response.redirect('/shop.html');
-        //         });
-        // }
         changeInformation(hotspot) {
             this.hotstop = hotspot;
 
-            //weather
-            this.weatherText = document.getElementById("weather");
-            this.weatherText.textContent = this.hotstop.weather;
-            this.displayBanner.appendChild(this.weatherText);
             //--------------Picture-----------------
             this.bannerMap = document.getElementById("mainMap");
             this.bannerMap.src = this.hotstop.location;
@@ -63,12 +48,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             //p
             this.generalInformationP = document.getElementById("generalInformationP");
-            console.log(this.hotstop.generalInformation);
             this.generalInformationP.textContent = this.hotstop.generalInformation;
+            //p - currency
+            this.currencyInformation = document.getElementById("currencyInformation");
+
 
             //generalInfo
             this.generalInformationDiv.appendChild(this.generalInformationH1);
             this.generalInformationDiv.appendChild(this.generalInformationP);
+            this.generalInformationDiv.appendChild(this.currencyInformation);
             this.generalInformationArticle.appendChild(this.generalInformationDiv);
             this.mainInfoScreen.appendChild(this.generalInformationArticle);
             //--------------Additional Information--------------
@@ -109,8 +97,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
             document.getElementById("main").style.marginLeft = "12.5%";
         }
         initializeHeader(){
-            //this.getWeatherData();
-            this.getCurrencyData('GBP');
+            this.fetchWeatherData(document.getElementById("cityName").textContent);
+            this.fetchCurrencyData(document.getElementById("cityName").textContent);
             //Favourite List Function
             this.favouriteList = document.getElementById("favourites");
             this.favouriteList.addEventListener("click", this.openNav);
@@ -188,34 +176,53 @@ document.addEventListener("DOMContentLoaded", function (event) {
             for (let i = 0; i < this.allStars.length; i++) {
                 this.allStars.item(i).addEventListener("click", event => this.changeStar(this.allStars.item(i)));
             }
-
             //append the starting information from html5
             this.generalInformationArticle = document.getElementById("generalInformation");
             this.mainInfoScreen.appendChild(this.generalInformationArticle);
             this.additionalInformationArticle = document.getElementById("additionalInformation");
             this.mainInfoScreen.appendChild(this.additionalInformationArticle);
         }
-        getWeatherData(){
+        fetchWeatherData(city){
             console.log("getting weather...");
+            let cityName = city;
             let apiKey = '76ec2de61dcfa5ab9f6d14d34a6f40ac';
-            // let apiKey = '10270ed5e6200b64aac3df5798f3c0a2';
-            fetch('https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=' + apiKey)
+            let unit = 'metric';
+            // let apiKey = '10270ed5e6200b64aac3df5798f3c0a2'; //Zeljko's
+            fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&units=' + unit + '&appid=' + apiKey)
                 .then(response => response.json())
-                .then(data => console.log(data))
+                .then(data => this.setWeather(Math.round(data.main.temp) + "° "+ data.weather[0].main))
                 .catch(err => console.log("error"));
         }
-        getCurrencyData(currency){
+        setWeather(weather){
+            console.log(weather);
+            this.actualWeather = document.getElementById("weather");
+            this.actualWeather.textContent = weather;
+        }
+        setCurrency(city){
+            this.currency = document.getElementById("currencyInformation");
+            this.currency.textContent = city;
+        }
+        fetchCurrencyData(city){
+            let currency = null;
+            if(city === "New York"){
+                currency = 'USD';
+            }
+            else if(city === "London"){
+                currency = 'GBP';
+            }
+            else if(city === "Istanbul"){
+                currency = 'TRY';
+            }
             console.log("getting currency...");
             let apiKey = 'd1f2fee8d8345122270f';
             let q = 'EUR_' + currency;
 
-            fetch('https://free.currconv.com/api/v7/convert?q='+ q +'&compact=ultra&apiKey=' + apiKey)
+            fetch('https://free.currconv.com/api/v7/convert?apiKey=' + apiKey + '&q=' + q)
                 .then(response => response.json())
-                .then(data =>console.log(data))
+                .then(data =>this.setCurrency(Object.values(data.results)[0].val))
+                //.then(data =>console.log(Object.values(data.results)[0].val))
                 .catch(err => console.log("error"));
         }
-
-
         changeStar(star) {
             if (star.src.match("StarEmpty")) {
                 star.src = "./symbols/Star.png";
@@ -226,7 +233,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
     }
     const info = new Info();
-
 
     // let hotstop = [];
     //
