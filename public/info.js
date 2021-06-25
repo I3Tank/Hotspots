@@ -188,6 +188,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             for (let i = 0; i < this.allStars.length; i++) {
                 this.allStars.item(i).addEventListener("click", event => this.changeStar(this.allStars.item(i)));
             }
+
             //append the starting information from html5
             this.generalInformationArticle = document.getElementById("generalInformation");
             this.mainInfoScreen.appendChild(this.generalInformationArticle);
@@ -225,6 +226,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
     }
     const info = new Info();
+
 
     // let hotstop = [];
     //
