@@ -31,7 +31,7 @@ class LoginController{
         let password = req.body.password;
 
         if(LoginModel.registerUser(username, password)){
-            res.redirect('/main.html');
+            res.redirect('/login.html');
         }
         else{
             res.send("User already exists!");
@@ -53,7 +53,7 @@ class LoginController{
             req.session.destroy();
             res.redirect('main.html');
         }else{
-            res.send('Login first!')
+            res.send('Login first!');
         }
         res.end();
     }

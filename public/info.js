@@ -109,15 +109,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
             document.getElementById("main").style.marginLeft = "12.5%";
         }
         initializeHeader(){
-            //TODO functionality for Login Button
-            //Login button
-            // this.loginButton = document.getElementById("loginButton");
-            // this.loginButton.addEventListener("click", this.openLoginWindow);
-
-            //shop functionality
-            // this.shopButton = document.getElementById("shopBtn");
-            // this.shopButton.addEventListener("click", event => this.fetchShop());
-
+            //this.getWeatherData();
+            this.getCurrencyData('GBP');
             //Favourite List Function
             this.favouriteList = document.getElementById("favourites");
             this.favouriteList.addEventListener("click", this.openNav);
@@ -190,8 +183,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     break;
             }
 
-
-
             //star functionality
             this.allStars = document.getElementsByClassName("star");
             for (let i = 0; i < this.allStars.length; i++) {
@@ -202,6 +193,25 @@ document.addEventListener("DOMContentLoaded", function (event) {
             this.mainInfoScreen.appendChild(this.generalInformationArticle);
             this.additionalInformationArticle = document.getElementById("additionalInformation");
             this.mainInfoScreen.appendChild(this.additionalInformationArticle);
+        }
+        getWeatherData(){
+            console.log("getting weather...");
+            let apiKey = '76ec2de61dcfa5ab9f6d14d34a6f40ac';
+            // let apiKey = '10270ed5e6200b64aac3df5798f3c0a2';
+            fetch('https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=' + apiKey)
+                .then(response => response.json())
+                .then(data => console.log(data))
+                .catch(err => console.log("error"));
+        }
+        getCurrencyData(currency){
+            console.log("getting currency...");
+            let apiKey = 'd1f2fee8d8345122270f';
+            let q = 'EUR_' + currency;
+
+            fetch('https://free.currconv.com/api/v7/convert?q='+ q +'&compact=ultra&apiKey=' + apiKey)
+                .then(response => response.json())
+                .then(data =>console.log(data))
+                .catch(err => console.log("error"));
         }
 
 
