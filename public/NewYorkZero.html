@@ -3,23 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Hotstops</title>
-    <link rel="stylesheet" href="info.css">
-    <script src="info.js"></script>
+    <link rel="stylesheet" href="infoZero.css">
+    <script src="infoZero.js"></script>
 </head>
 <body>
 <header>
-    <img id="logo" src="symbols/Logo.png" height="50" width="50"/>
     <ul id="navbar" class="contentNav2">
-        <li id="hotstops"><a href="main.html">Hotstops</a></li>
-        <li id="favourites"><a class="openBtn"><img id="star" src="symbols/Star.png" height="40" width="40" alt="Favourites"/></a></li>
+        <li id="hotstops"><a href="mainZero.html">Hotstops</a></li>
+        <li id="favourites"><a class="openBtn">Star</a></li>
         <li class="contentNav">
-<!--            <a id="shopBtn" href="shop" type="submit">Shop</a>-->
             <form action="shop" method="GET">
                 <input id="shopBtn" value="Shop" type="submit">
             </form>
         </li>
         <li class="contentNav">
-<!--            <a href="login.html">Login</a>-->
             <form action="login" method="GET">
                 <input id="loginButton" value="Login" type="submit">
             </form>
@@ -30,7 +27,6 @@
     <section id="banner">
         <h1 id="cityName">New York</h1>
         <h1 id="weather">26° Sunshine</h1>
-        <img src="pics/NewYork/NYC_Map.png" height="2048" width="2048" id="mainMap" alt="Picture of New York."/>
         <article id="hotspotList">
             <h1 id="hotspotListHeader">Hotstops</h1>
             <ul>
@@ -40,6 +36,7 @@
             </ul>
         </article>
     </section>
+
     <article id="generalInformation">
         <div class="text" id="generalInformationText">
             <h1 id="generalInformationH1">General Information:</h1>
@@ -52,23 +49,10 @@
                 This is the longest and also the last line of general information that i can come up with right now for testing purposes.
             </p>
             <p id="currencyInformation">
-                Average cost for a trip to New York per day:
+                Average cost for a trip to New York per day: 123€ = 100$
             </p>
         </div>
-        <img class="picture" id="galleryOfHotspot" src="pics/NewYork/NYC_Map.png" height="2048" width="2048" alt="Gallery of Hotstops"/>
     </article>
-
-
-
-<!--    <article class="gallery">-->
-<!--        <div>-->
-<!--            <img class=galleryPics" src="../pics/infoPics/New York/EmpireStateBuilding/EmpireStateBuildingGoldenHall.jpg" height="489" width="869"/>-->
-<!--            <img class=galleryPics" src="../pics/infoPics/New York/EmpireStateBuilding/EmpireStateBuildingKingKong.jpg" height="800" width="1200"/>-->
-<!--            <img class=galleryPics" src="../pics/infoPics/New York/EmpireStateBuilding/EmpireStateBuildingNight.jpg" height="446" width="669"/>-->
-<!--        </div>-->
-<!--    </article>-->
-
-
     <article id="additionalInformation">
         <div class="text" id="additionalInformationText">
             <h1 id="additionalInformationH1">Additional Information:</h1>
@@ -86,12 +70,11 @@
                 Bruh.
             </p>
         </div>
-        <img class="picture" id="googleMapsView" src="pics/NewYork/NYC_Map.png" height="2048" width="2048" alt="Google Maps View"/>
     </article>
 </main>
 
 <div id="mySidebar" class="sidebar">
-    <a id="closeBtn">×</a>
+    <a href="javascript:void(0)" id="closeBtn">×</a>
     <a>Hotspot 1</a>
     <a>Hotspot 2</a>
 </div>

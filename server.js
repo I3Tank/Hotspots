@@ -15,6 +15,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.use(express.static(__dirname + '/public'));
+app.use('/zero', express.static( __dirname + '/public'))
+
+const zeroRoutes = require('./api/routes/ZeroRoutes');
+app.use('/zero', zeroRoutes);
 
 const frontendRoutes = require('./api/routes/FrontendRoutes');
 app.use('/', frontendRoutes);

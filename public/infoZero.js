@@ -29,13 +29,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
         changeInformation(hotspot) {
             this.hotstop = hotspot;
 
-            //--------------Picture-----------------
-            this.bannerMap = document.getElementById("mainMap");
-            this.bannerMap.src = this.hotstop.location;
-            this.displayBanner.appendChild(this.bannerMap);
-            this.mainInfoScreen.appendChild(this.displayBanner);
-
-
             //--------------General Information--------------
             //article
             this.generalInformationArticle = document.getElementById("generalInformation");
@@ -49,10 +42,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
             //p
             this.generalInformationP = document.getElementById("generalInformationP");
             this.generalInformationP.textContent = this.hotstop.generalInformation;
-
-            this.gallery = document.getElementById("galleryOfHotspot");
-            this.gallery.src = this.hotstop.galleryPic;
-            this.generalInformationArticle.appendChild(this.gallery);
             //p - currency
             this.currencyInformation = document.getElementById("currencyInformation");
 
@@ -174,6 +163,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     this.mainInfoScreen.appendChild(this.displayBanner);
                     break;
             }
+
             //star functionality
             this.allStars = document.getElementsByClassName("star");
             for (let i = 0; i < this.allStars.length; i++) {
@@ -197,28 +187,25 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 .then(data => this.setWeather(data))
                 .catch(err => console.log("error"));
         }
-
         setWeather(data){
-            let temperature = data.main.temp;
-            let weather = data.weather[0].main;
-            this.symbol = document.createElement("img");
+                let temperature = data.main.temp;
+                let weather = data.weather[0].main;
+                let emoji;
 
-            if(temperature > 20){
-                this.symbol.src = "symbols/hot.png"
+                if(temperature > 20){
+                    emoji = "hot";
+                }
+                else if(temperature < 10){
+                    emoji = "cold";
+                }
+                else{
+                    emoji = "normal";
+                }
+                this.symbol = document.createTextNode(emoji);
 
-            }
-            else if(temperature < 10){
-                this.symbol.src = "symbols/cold.png";
-            }
-            else{
-                this.symbol.src = "symbols/normal.png";
-            }
-
-            this.actualWeather = document.getElementById("weather");
-            this.actualWeather.textContent = Math.round(temperature) + '° ' + weather + ' ';
-            this.symbol.style.width = "15%";
-            this.symbol.style.height = "15%";
-            this.actualWeather.appendChild(this.symbol);
+                this.actualWeather = document.getElementById("weather");
+                this.actualWeather.textContent = Math.round(temperature) + '° ' + weather + ' ';
+                this.actualWeather.appendChild(this.symbol);
         }
         setCurrency(citycourse, currencysymbol){
             let costsperday;
@@ -235,20 +222,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
             this.currencyText = document.createTextNode(costscorrectcurrency + currencysymbol);
             this.currency.appendChild(this.currencyText);
 
-            this.moneyimg = document.createElement("img");
+            let price;
             if (currencysymbol === '$' && costscorrectcurrency > 550){
-                this.moneyimg.src = "symbols/expensive.png"
+                price = " expensive!"
             } else if (currencysymbol === '£' && costscorrectcurrency > 250) {
-                this.moneyimg.src = "symbols/expensive.png"
+                price = " expensive!"
             } else if (currencysymbol === '₺' > 1100){
-                this.moneyimg.src = "symbols/expensive.png"
+                price = " expensive!"
             } else {
-                this.moneyimg.src = "symbols/cheap.png"
+                price = " cheap!"
             }
+            this.moneyText = document.createTextNode(price);
 
-            this.moneyimg.style.width = '5%';
-            this.moneyimg.style.height = '5%';
-            this.currency.appendChild(this.moneyimg);
+            this.currency.appendChild(this.moneyText);
         }
         fetchCurrencyData(city){
             let currency = null;
@@ -286,34 +272,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
     const info = new Info();
 
-    // let hotstop = [];
-    //
-    // hotstop[0] = new Hotstops("Sunny","pics/London/London_Map_BigBen.png", "Test Test \nTest2 TTTTTTTTTTttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttTTTTTTTTTTTTTTTTTTTTTTTTTTT", "Opening Hours", "History");
-    // hotstop[1] = new Hotstops("Rainy", "Buck", "Palace", "test2");
-    // hotstop[2] = new Hotstops("Foggy", "yes", "no", "thistest");
-
     info.initializeHeader();
     info.initializeBanner();
-
-    // info.displayHotstop(hotstop[0]);
-    // info.displayHotstop(hotstop[1]);
-    // info.displayHotstop(hotstop[2]);
-
-// let staropen = document.getElementById("staropen");
-// let node = document.createTextNode("Star");
-// staropen.appendChild(node);
-// let xy = staropen.addEventListener("click", openNav);
-// staropen.appendChild(xy);
-
-// function closeNav() {
-//     document.getElementById("mySidebar").style.width = "0";
-//     document.getElementById("main").style.marginLeft = "0";
-// }
-
-
-// let starclose = document.getElementById("starclose");
-    // let node2 = document.createTextNode("x");
-    // starclose.appendChild(node2);
-    // let xy2 = starclose.addEventListener("click", closeNav);
-    // starclose.appendChild(xy2);
 });

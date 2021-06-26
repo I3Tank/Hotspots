@@ -1,0 +1,172 @@
+*{
+    box-sizing: content-box;
+    font-family: Impact, serif;
+    font-weight: normal;
+
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    height: 60px;
+    width: 100%;
+
+    background-color: darkslategray;
+
+    z-index: 2;
+}
+#hotstops {
+    float: left;
+    font-size: 30px;
+    text-decoration: none;
+    padding-left: 60px;
+}
+#shopBtn , #loginButton{
+    all: unset;  /*removes all stylings*/
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+.contentNav2 li{
+    float: right;
+    display: inline;
+
+    font-size: 25px;
+    text-align: center;
+    padding: 15px 4% 15px 4%;
+
+    list-style-type: none;
+
+}
+.contentNav2 li a {
+    color: white;
+    text-decoration: none;
+}
+.contentNav:hover{
+    background-color: darkcyan;
+}
+#navbar{
+    padding: 0;
+    margin: 0;
+}
+.sidebar{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+.openBtn{
+    cursor: pointer;
+}
+.sidebar #closeBtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------*/
+#banner{
+    position: relative;
+    background: #3F7E80;
+    color: white;
+    margin-top: 60px;
+    height: 400px;
+}
+#cityName{
+    /*color: white;*/
+    position: absolute;
+    font-size: 60px;
+    left: 7.5%;
+    top: 3%;
+}
+#weather{
+    position: absolute;
+    font-size: 40px;
+    margin-left: 7.5%;
+    bottom: 3%;
+}
+#hotspotListHeader{
+    font-size: 60px;
+    margin: 0;
+}
+#hotspotList{
+    font-size: 30px;
+    text-align: left;
+    position: absolute;
+    top: 20%;
+    right: 5.5%;
+    width: 350px;
+}
+#hotspotList li{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+#hotspotList img{
+    width: 32px;
+    height: auto;
+    margin-left: 10px;
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------*/
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #303030;
+}
+.text{
+    color: lightgrey;
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------*/
+#generalInformation{
+    border-top: 30px solid;
+    position: relative;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+#generalInformationH1{
+    margin-top: 0;
+}
+#generalInformationText{
+    font-size: 30px;
+    margin-left: 30%;
+    width: 40%;
+}
+p{
+    padding-left: 30px;
+}
+h2{
+    padding-left: 10px;
+    font-size: 40px;
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------*/
+#additionalInformation{
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#additionalInformationText{
+    font-size: 30px;
+    margin-left: 30%;
+    width: 40%;
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------*/
+
