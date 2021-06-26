@@ -190,13 +190,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
             // let apiKey = '10270ed5e6200b64aac3df5798f3c0a2'; //Zeljko's
             fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&units=' + unit + '&appid=' + apiKey)
                 .then(response => response.json())
-                .then(data => this.setWeather(Math.round(data.main.temp) + "° "+ data.weather[0].main))
+                //.then(data => this.setWeather(Math.round(data.main.temp) + "° "+ data.weather[0].main))
+                .then(data => this.setWeather(data))
                 .catch(err => console.log("error"));
         }
-        setWeather(weather){
-            console.log(weather);
+        setWeather(data){
+            let temperature = data.main.temp;
+            let weather = data.weather[0].main;
+            let symbol;
+
+            if(temperature > 20){
+                symbol = "hot";
+            }
+
             this.actualWeather = document.getElementById("weather");
-            this.actualWeather.textContent = weather;
+            this.actualWeather.textContent = Math.round(temperature) + '° ' + weather + ' ' + symbol;
         }
         setCurrency(city){
             this.currency = document.getElementById("currencyInformation");
