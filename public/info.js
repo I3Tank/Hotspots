@@ -219,20 +219,50 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
         }
-        setCurrency(city){
+        setCurrency(citycourse, currencysymbol){
+            let costsperday;
+            if (currencysymbol === '$'){
+                costsperday = 444;
+            } else if (currencysymbol === '£') {
+                costsperday = 246;
+            } else {
+                costsperday = 104;
+            }
+            let costscorrectcurrency = Math.round((citycourse * costsperday) * 100) / 100
+
             this.currency = document.getElementById("currencyInformation");
-            this.currency.textContent = city;
+            this.currencyText = document.createTextNode(costscorrectcurrency + currencysymbol);
+            this.currency.appendChild(this.currencyText);
+
+            this.moneyimg = document.createElement("img");
+            if (currencysymbol === '$' && costscorrectcurrency > 550){
+                this.moneyimg.src = "symbols/expensive.png"
+            } else if (currencysymbol === '£' && costscorrectcurrency > 250) {
+                this.moneyimg.src = "symbols/expensive.png"
+            } else if (currencysymbol === '₺' > 1100){
+                this.moneyimg.src = "symbols/expensive.png"
+            } else {
+                this.moneyimg.src = "symbols/cheap.png"
+            }
+
+            this.moneyimg.style.width = '5%';
+            this.moneyimg.style.height = '5%';
+            this.currency.appendChild(this.moneyimg);
         }
         fetchCurrencyData(city){
             let currency = null;
+            let currencysymbol;
             if(city === "New York"){
                 currency = 'USD';
+                currencysymbol= '$';
             }
             else if(city === "London"){
                 currency = 'GBP';
+                currencysymbol = '£';
             }
             else if(city === "Istanbul"){
                 currency = 'TRY';
+                currencysymbol = '₺';
             }
             console.log("getting currency...");
             let apiKey = 'd1f2fee8d8345122270f';
@@ -240,7 +270,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             fetch('https://free.currconv.com/api/v7/convert?apiKey=' + apiKey + '&q=' + q)
                 .then(response => response.json())
-                .then(data =>this.setCurrency(Object.values(data.results)[0].val))
+                .then(data =>this.setCurrency(Object.values(data.results)[0].val, currencysymbol))
                 //.then(data =>console.log(Object.values(data.results)[0].val))
                 .catch(err => console.log("error"));
         }

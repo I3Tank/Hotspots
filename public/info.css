@@ -88,6 +88,7 @@ header{
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+    cursor: pointer;
 }
 #favourites{
     width: 120px;
