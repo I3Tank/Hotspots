@@ -10,6 +10,7 @@ hotspots.set("0", {
     additionalInformation1: "Monday to Thursday 1 - 10pm Friday to Sunday 12pm - 12am",
     additionalInformation2: "Of the top five tallest buildings in New York City, the Empire State Building is by far the oldest." +
         "Construction of the building began in 1930 and, after an incredible 13 months (just 410 days), was completed in 1931.",
+    galleryPic: "..\/pics\/infoPics\/New York\/EmpireStateBuilding\/EmpireStateBuildingNight.jpg",
 });
 hotspots.set("1", {
     weather: "Rainyy",

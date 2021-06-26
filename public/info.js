@@ -49,6 +49,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
             //p
             this.generalInformationP = document.getElementById("generalInformationP");
             this.generalInformationP.textContent = this.hotstop.generalInformation;
+
+            this.gallery = document.getElementById("galleryOfHotspot");
+            this.gallery.src = this.hotstop.galleryPic;
+            this.generalInformationArticle.appendChild(this.gallery);
             //p - currency
             this.currencyInformation = document.getElementById("currencyInformation");
 
