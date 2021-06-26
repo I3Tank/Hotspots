@@ -170,7 +170,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     this.mainInfoScreen.appendChild(this.displayBanner);
                     break;
             }
-
             //star functionality
             this.allStars = document.getElementsByClassName("star");
             for (let i = 0; i < this.allStars.length; i++) {
@@ -194,17 +193,31 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 .then(data => this.setWeather(data))
                 .catch(err => console.log("error"));
         }
+
         setWeather(data){
+
             let temperature = data.main.temp;
             let weather = data.weather[0].main;
-            let symbol;
+            this.symbol = document.createElement("img");
 
             if(temperature > 20){
-                symbol = "hot";
+                this.symbol.src = "symbols/hot.png"
+
+            }
+            else if(temperature < 10){
+                this.symbol.src = "symbols/cold.png";
+            }
+            else{
+                this.symbol.src = "symbols/normal.png";
             }
 
             this.actualWeather = document.getElementById("weather");
-            this.actualWeather.textContent = Math.round(temperature) + '° ' + weather + ' ' + symbol;
+            this.actualWeather.textContent = Math.round(temperature) + '° ' + weather + ' ';
+            this.symbol.style.width = "15%";
+            this.symbol.style.height = "15%";
+            this.actualWeather.appendChild(this.symbol);
+
+
         }
         setCurrency(city){
             this.currency = document.getElementById("currencyInformation");
