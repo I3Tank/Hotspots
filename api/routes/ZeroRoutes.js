@@ -8,4 +8,6 @@ zeroRoutes.get('/hotstops', function(req, res){
 // zeroRoutes.get('/NewYorkZero.html', function(req, res){
 //     res.sendFile(path.join(__dirname, "../../public/NewYorkZero.html"));
 // });
+
+
 module.exports = zeroRoutes;
