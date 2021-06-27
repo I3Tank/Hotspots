@@ -16,15 +16,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
             this.displayBanner = document.getElementById("banner");
         }
         fetchHotspot(index){
-            let url = 'http://localhost:3000/api/hotstops/' + index;
+            let url = 'http://localhost:3000/api/hotspots/' + index;
             fetch(url)
-                .then(function(response){
-                    return response.json();
-                })
-                .then(function (data){
-                    //console.log(data);
-                    info.changeInformation(data);
-                });
+                .then(response => response.json())
+                .then(data =>info.changeInformation(data));
         }
         changeInformation(hotspot) {
             this.hotstop = hotspot;

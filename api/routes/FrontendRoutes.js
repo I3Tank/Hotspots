@@ -4,11 +4,10 @@ const path = require("path");
 const LoginController = require('../controllers/LoginController');
 
 frontendRoutes.get('/shop', LoginController.checkLogin, function(req, res, next) {
-    console.log("shopreq");
     res.sendFile(path.join(__dirname, "../../public/shop.html"));
 });
 
-frontendRoutes.get('/hotstops', function(req, res){
+frontendRoutes.get('/main', function(req, res){
     res.sendFile(path.join(__dirname, "../../public/main.html"));
 });
 
