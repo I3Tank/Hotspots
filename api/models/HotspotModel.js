@@ -23,6 +23,7 @@ hotspots.set("1", {
     additionalInformation2: "The Statue of Liberty was a gift to the United States from the people of France to commemorate 100 years of Franco-American friendship." +
         "The statue also commemorates the centennial of America's independence." +
         "It was sculpted by Frederic Auguste Bartholdi. The framework was designed by French engineer Gustave Eiffel.",
+    galleryPic: "..\/pics\/infoPics\/New York\/StatueOfLiberty\/StatueOfLibertyCrown.jpg",
 });
 hotspots.set("2", {
     weather: "Rainyyy",
@@ -34,6 +35,7 @@ hotspots.set("2", {
     additionalInformation1: "All the time?..",
     additionalInformation2: "It once went by the name Longacre Square." +
         "It took the name Times Square from the New York Times headquarters, which in 1904 moved to One Times Square.",
+    galleryPic: "..\/pics\/infoPics\/New York\/TimeSquare\/TimeSquareBillboard.jpg",
 });
 
 //----------LONDON----------
@@ -46,6 +48,7 @@ hotspots.set("3", {
         "A light in the clock tower tells when the House of Commons is in session.",
     additionalInformation1: "Not open?",
     additionalInformation2: "The name Big Ben originally referred to just the bell but now it encompasses the clock, the tower and the bell.",
+    galleryPic: "..\/pics\/infoPics\/London\/BigBen\/BigBenClock.jfif",
 });
 hotspots.set("4", {
     weather: "Rain",
@@ -57,6 +60,7 @@ hotspots.set("4", {
     additionalInformation2: "Buckingham Palace was originally a grand house built by the Dukes of Buckingham for his wife." +
         "George IV began transforming it into a palace in 1826." +
         "Queen Victoria was the first monarch to live there.",
+    galleryPic: "..\/pics\/infoPics\/London\/BuckinghamPalace\/BuckinghamPalaceOutside.jpg",
 });
 hotspots.set("5", {
     weather: "Rain",
@@ -67,6 +71,8 @@ hotspots.set("5", {
     additionalInformation1: "Daily 11am - 6pm",
     additionalInformation2: "Just like the Eiffel Tower, the London Eye was originally planned as a temporary structure; built to stand on Lambeth Council's ground on the banks of the Thames for around five years." +
         "In July 2002, Lambeth Council granted the Eye a permanent licence.",
+    galleryPic: "..\/pics\/infoPics\/London\/LondonEye\/LondonEyeGlasses.jpg",
+
 });
 
 //----------ISTANBUL----------
@@ -78,6 +84,7 @@ hotspots.set("6", {
     additionalInformation1: "From 8-25h",
     additionalInformation2: "Once the largest cathedral in the world, Ayasofya has stood for more than 1500 years along the banks of the Bosporus Strait and has housed three religious groups." +
         "It has been destroyed and rebuilt over 8 times.",
+    galleryPic: "..\/pics\/infoPics\/Istanbul\/Ayasofya\/AyasofyaOutside.jpg",
 });
 hotspots.set("7", {
     weather: "Rain",
@@ -91,6 +98,7 @@ hotspots.set("7", {
         "The mighty ruler said that his daughter would be bitten by a snake before she turned 18 and would die." +
         "Then the emperor repaired the structure in the middle of the sea and placed his daughter in the tower." +
         "However the princess could not escape the fate and was bitten by a snake which came to the island in a fruit basket.",
+    galleryPic: "..\/pics\/infoPics\/Istanbul\/Maidens Tower\/MaidensTowerFromTop.jpg",
 });
 hotspots.set("8", {
     weather: "Rain",
@@ -101,6 +109,7 @@ hotspots.set("8", {
     additionalInformation1: "All the time?",
     additionalInformation2: "The square's name derives from Arabic meaning 'division' or 'distribution." +
         "The city's main water line, built by Sultan Mahmud I in 1732, ended here and branched off to other parts of the city",
+    galleryPic: "..\/pics\/infoPics\/Istanbul\/Taksim\/TaksimSquare.jpg",
 });
 
 //TODO Insert multiple Hotspots with correct Information
