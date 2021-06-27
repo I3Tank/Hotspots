@@ -3,11 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    <script src="logout.js"></script>
 </head>
 <body>
+<main id="mainScreen">
 <h1>You are already logged in!</h1>
 <form action="logout" method="GET">
     <input value="logout" type="submit">
 </form>
+<h1>Change your password</h1>
+<label>
+    <input type="password" name="newPassword" placeholder="new Password" id="newPassword">
+    <button id="changePwBtn">change</button>
+</label>
+<h1>Delete your account</h1>
+<button id="deleteButton">Delete</button>
+</main>
 </body>
 </html>

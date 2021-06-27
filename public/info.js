@@ -188,8 +188,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
             // let apiKey = '10270ed5e6200b64aac3df5798f3c0a2'; //Zeljko's
             fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&units=' + unit + '&appid=' + apiKey)
                 .then(response => response.json())
-                //.then(data => this.setWeather(Math.round(data.main.temp) + "° "+ data.weather[0].main))
                 .then(data => this.setWeather(data))
+                //.then(data => console.log(data))
                 .catch(err => console.log("error"));
         }
 
@@ -200,7 +200,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             if(temperature > 20){
                 this.symbol.src = "symbols/hot.png"
-
             }
             else if(temperature < 10){
                 this.symbol.src = "symbols/cold.png";

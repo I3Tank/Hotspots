@@ -17,6 +17,12 @@ class LoginModel{
     static correctPassword(username, password){
         return users.get(username) === password;
     }
+    static deleteUser(username) {
+        return users.delete(username);
+    }
+    static changePassword(user, newPassword){
+        return users.set(user, newPassword);
+    }
 }
 
 module.exports = LoginModel;

@@ -21,10 +21,10 @@ const zeroRoutes = require('./api/routes/ZeroRoutes');
 app.use('/zero', zeroRoutes);
 
 const frontendRoutes = require('./api/routes/FrontendRoutes');
-app.use('/Hotstops', frontendRoutes);
+app.use('/hotstops', frontendRoutes);
 
 const hotspotRoutes = require('./api/routes/HotspotRoutes');
-app.use('/api/Hotspots', hotspotRoutes);
+app.use('/api/hotspots', hotspotRoutes);
 
 const loginRoutes = require('./api/routes/LoginRoutes');
 app.use('/hotstops', loginRoutes);

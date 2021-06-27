@@ -4,7 +4,6 @@ class LoginController{
     static login(req, res){
         console.log("logging in...");
         let username = req.body.username;
-        // let password = req.body.password;
         let password = req.body.password;
         console.log(username);
         console.log(password);
@@ -42,13 +41,11 @@ class LoginController{
     }
     static checkLogin(req, res, next) {
         if (req.session.loggedin) {
-            console.log("display Shop");
+            console.log("logged in");
             next();
-
         } else {
-            console.log("deny Shop");
+            console.log("not logged in");
             res.redirect("/hotstops/login.html");
-            next();
         }
     }
     static logout(req, res){
@@ -59,6 +56,17 @@ class LoginController{
             res.send('Login first!');
         }
         res.end();
+    }
+    static deleteUser(username){
+        if(LoginModel.deleteUser(username)){
+            return true;
+        }
+    }
+    static changePassword(req, res, username){
+        let newPassword = req.body.newPassword;
+        if(LoginModel.changePassword(username, newPassword)){
+            res.send('changed PW');
+        }
     }
 }
 module.exports = LoginController;
