@@ -81,22 +81,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
             this.additionalInformationArticle.appendChild(this.additionalInformationDiv);
             this.mainInfoScreen.appendChild(this.additionalInformationArticle);
         }
-        closeNav() {
-            document.getElementById("mySidebar").style.width = "0";
-            document.getElementById("main").style.marginLeft = "0";
-        }
-        openNav(){
-            document.getElementById("mySidebar").style.width = "12.5%";
-            document.getElementById("main").style.marginLeft = "12.5%";
-        }
         initializeHeader(){
             this.fetchWeatherData(document.getElementById("cityName").textContent);
             this.fetchCurrencyData(document.getElementById("cityName").textContent);
-            //Favourite List Function
-            this.favouriteList = document.getElementById("favourites");
-            this.favouriteList.addEventListener("click", this.openNav);
-            this.favouriteListCloseBtn = document.getElementById("closeBtn");
-            this.favouriteListCloseBtn.addEventListener("click", this.closeNav);
         }
         initializeBanner(){
             //Hotstops List
@@ -162,12 +149,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     this.displayBanner.appendChild(this.hotstopUL);
                     this.mainInfoScreen.appendChild(this.displayBanner);
                     break;
-            }
-
-            //star functionality
-            this.allStars = document.getElementsByClassName("star");
-            for (let i = 0; i < this.allStars.length; i++) {
-                this.allStars.item(i).addEventListener("click", event => this.changeStar(this.allStars.item(i)));
             }
             //append the starting information from html5
             this.generalInformationArticle = document.getElementById("generalInformation");
@@ -260,14 +241,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 .then(data =>this.setCurrency(Object.values(data.results)[0].val, currencysymbol))
                 //.then(data =>console.log(Object.values(data.results)[0].val))
                 .catch(err => console.log("error"));
-        }
-        changeStar(star) {
-            if (star.src.match("StarEmpty")) {
-                star.src = "./symbols/Star.png";
-            }
-            else if (star.src.match("Star")) {
-                star.src = "./symbols/StarEmpty.png";
-            }
         }
     }
     const info = new Info();

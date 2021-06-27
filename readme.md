@@ -23,3 +23,12 @@ MUST REQUIREMENTS:
 7.)Frontend responsive
 8.)Min 1 REST web service
 9.)Session Management (Login)
+
+---wc3 compliant---
+main
+NewYork
+Istanbul
+London
+login
+logout
+shop

@@ -48,3 +48,13 @@ article img{
     height: 175px;
     width: auto;
 }
+@media screen and (max-width: 1200px){
+    .cityBox{
+        width: 200px;
+        height: 400px;
+    }
+    article img{
+        width: 200px;
+        height: 300px;
+    }
+}
