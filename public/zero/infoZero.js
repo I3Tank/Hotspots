@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             this.displayBanner = document.getElementById("banner");
         }
         fetchHotspot(index){
-            let url = 'http://localhost:3000/api/hotstops/' + index;
+            let url = 'http://localhost:3000/api/hotspots/' + index;
             fetch(url)
                 .then(function(response){
                     return response.json();

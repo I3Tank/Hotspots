@@ -15,7 +15,7 @@ class LoginController{
                 if(LoginModel.correctPassword(username, password)){
                     req.session.loggedin = true;
                     req.session.username = username;
-                    res.redirect('/main.html');
+                    res.redirect('/hotstops/main.html');
                 }
                 else {
                     console.log("wrong pw");
@@ -34,7 +34,7 @@ class LoginController{
         let password = req.body.password;
 
         if(LoginModel.registerUser(username, password)){
-            res.redirect('/login.html');
+            res.redirect('/hotstops/login.html');
         }
         else{
             res.send("User already exists!");
@@ -47,14 +47,14 @@ class LoginController{
 
         } else {
             console.log("deny Shop");
-            res.redirect("/login.html");
+            res.redirect("/hotstops/login.html");
             next();
         }
     }
     static logout(req, res){
         if(req.session.loggedin){
             req.session.destroy();
-            res.redirect('main.html');
+            res.redirect('/hotstops/main.html');
         }else{
             res.send('Login first!');
         }
